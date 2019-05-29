@@ -58,6 +58,10 @@ public class VideoActivity extends AppCompatActivity {
         DefaultExtractorsFactory extractorsFactory = new DefaultExtractorsFactory();
         DefaultDataSourceFactory dataSourceFactory = new DefaultDataSourceFactory(getApplicationContext(), "ExoplayerDemo");
 
+
+        //url for Audio -: http://www.hrupin.com/wp-content/uploads/mp3/testsong_20_sec.mp3
+        //url for Video -: http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4
+
         MediaSource mediaSource = new ExtractorMediaSource.Factory(dataSourceFactory).setExtractorsFactory(extractorsFactory).createMediaSource(Uri.parse("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"));
 
         player.prepare(mediaSource);
